@@ -15,6 +15,9 @@
 body {
   background: var(--black-color);
   color: #fff;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 header,
 #ebookOne,
@@ -50,12 +53,12 @@ footer span a {
 }
 header {
   width: 100vw;
-  height: 4rem;
+  height: 4.5rem;
   display: grid;
   place-content: center;
   background: var(--purple-color);
 
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 8px + 2vw, 1.6rem);
 }
 main {
   display: flex;
@@ -65,12 +68,12 @@ main {
   margin: 3.2rem 2rem 0 2rem;
 }
 main img {
-  width: 6.8rem;
-  height: 2.6rem;
+  width: clamp(6.8rem, 2rem + 15vw, 10rem);
 }
 #ebookOne {
   width: 100%;
-  height: 4rem;
+  max-width: 37rem;
+  height: clamp(3.5rem, 3.5rem + 2vw, 5.5rem);
   border: 1px solid var(--purple-color);
   border-radius: 4px;
   background: none;
@@ -79,21 +82,22 @@ main img {
 }
 #ebookOne a {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 5px + 3vw, 1.7rem);
   text-transform: uppercase;
   color: #fff;
   width: 100%;
 }
 #comment {
   width: 100%;
-  height: 3.4rem;  
+  max-width: 37rem;
+  height: clamp(3rem, 3rem + 2vw, 4rem);  
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
 
   border: 1px solid #130B1D;
-  background: #08040D;
+  background: var(--blackTwo-color);
   border-radius: 3.2rem;
 
   font-size: 1.4rem;
@@ -105,16 +109,16 @@ main img {
 
 #firstParagraph {
   margin: 4rem 0 1.6rem 0;
-  font-size: 2.4rem;
+  font-size: clamp(2.3rem, 1.3rem + 3vw, 3rem); /* 2.4 min*/
   text-align: center;
-  line-height: 3.2rem;
+  line-height: clamp(2.8rem, 1rem + 3vw, 5.4rem); /*3.2 min*/
 }
 #firstParagraph span {
   color: var(--purple-color);
 }
 #secondParagraph {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 1rem + 1vw, 1.7rem);
   color: var(--gray-color);
   line-height: 2.2rem;
 }
@@ -123,6 +127,7 @@ main img {
 
 .card {
   width: 100%;
+  max-width: 56rem;
   border-radius: 4px;
   background: #fff;
   padding: 2.4rem 1.6rem;
