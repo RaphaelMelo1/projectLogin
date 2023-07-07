@@ -10,203 +10,191 @@
   --black-color: #030007;
   --blackTwo-color: #08040D;
   --gray-color: #BFBFBF;
+  --border-students: #130B1D;
 }
 
 body {
   background: var(--black-color);
   color: #fff;
-  min-width: 100vw;
-  min-height: 100vh;
-  overflow-x: hidden;
+
+  position: relative;
 }
+
 header,
-#ebookOne,
-#comment,
+main #firstButton,
+#students,
 #secondParagraph,
-#time-limit,
-.bottom-card span,
-footer span {
+#time,
+#bottomSpanCard {
   font-family: 'Inter';
 }
-header,
-#comment,
-#time-limit,
-.bottom-card span,
-footer span {
-  font-weight: 500;
-}
-#ebookOne,
 #firstParagraph,
-#discount,
-.text-card p span,
-#price,
-#ebookTwo {
-  font-weight: 600;
-}
-#firstParagraph,
-#discount,
-.text-card p,
-#price,
-#ebookTwo,
-footer span a {
+.card,
+footer,
+#instagram {
   font-family: 'Sora';
 }
+
 header {
-  width: 100vw;
-  height: 4.5rem;
-  display: grid;
-  place-content: center;
+  width: 100%;
+  height: 4rem; /*colocar clamp*/
+  font-size: clamp(1.4rem, 8px + 2vw, 1.6rem);
+  font-weight: 500;
   background: var(--purple-color);
 
-  font-size: clamp(1.4rem, 8px + 2vw, 1.6rem);
+  display: grid;
+  place-content: center;
 }
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 3.2rem 2rem 0 2rem;
 }
-main img {
+#eFrontLogo {
   width: clamp(6.8rem, 2rem + 15vw, 10rem);
+  margin-bottom: 3.2rem;
 }
-#ebookOne {
+main #firstButton {
   width: 100%;
   max-width: 37rem;
   height: clamp(3.5rem, 3.5rem + 2vw, 5.5rem);
+  background: none;
   border: 1px solid var(--purple-color);
   border-radius: 4px;
-  background: none;
-
-  margin: 3.2rem 0 3.2rem 0;
-}
-#ebookOne a {
-  text-decoration: none;
-  font-size: clamp(1.4rem, 5px + 3vw, 1.7rem);
+  font-weight: 600;
   text-transform: uppercase;
+  text-decoration: none;
   color: #fff;
-  width: 100%;
+  display: grid;
+  place-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 3.2rem;
 }
-#comment {
-  width: 100%;
+#students {
+  width: 100%; /*colocar clamp*/
   max-width: 37rem;
   height: clamp(3rem, 3rem + 2vw, 4rem);  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
 
-  border: 1px solid #130B1D;
-  background: var(--blackTwo-color);
+  border: 1px solid var(--border-students);
   border-radius: 3.2rem;
+  background: var(--blackTwo-color);
 
+  font-weight: 500;
   font-size: 1.4rem;
-}
-#comment img {
-  width: 1.8rem;
-  height: 1.8rem;
-}
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 4rem;
+}
+#students img {
+  width: 1.8rem; /*colocar clamp*/
+}
 #firstParagraph {
-  margin: 4rem 0 1.6rem 0;
-  font-size: clamp(2.3rem, 1.3rem + 3vw, 3rem); /* 2.4 min*/
   text-align: center;
+  font-size: clamp(2.3rem, 1.3rem + 3vw, 3rem); /* 2.4 min*/
   line-height: clamp(2.8rem, 1rem + 3vw, 5.4rem); /*3.2 min*/
+  margin-bottom: 1.6rem;
+  font-weight: 600;
 }
 #firstParagraph span {
   color: var(--purple-color);
 }
 #secondParagraph {
-  font-weight: 400;
-  font-size: clamp(1.4rem, 1rem + 1vw, 1.7rem);
+  text-align: center;
   color: var(--gray-color);
-  line-height: 2.2rem;
+  font-size: clamp(1.4rem, 1rem + 1vw, 1.7rem);
+  line-height: 2rem;
+  margin-bottom: 4.8rem;
+  font-weight: 400;
 }
 
-/* card */
-
 .card {
-  width: 100%;
+  width: 100%; /*colocar clamp*/
   max-width: 56rem;
-  border-radius: 4px;
   background: #fff;
-  padding: 2.4rem 1.6rem;
-
   color: #000;
-  margin: 4.8rem 0;
+  padding: 2.4rem 1.6rem;
+  border-radius: 4px;
+  margin-bottom: 4.8rem;
 }
 .top-card {
   display: flex;
+  font-size: clamp(1.4rem, 1rem + 1vw, 1.6rem);
   align-items: center;
-  gap: 1.7rem;
+  gap: clamp(1.7rem, 0.7rem + 3vw, 3rem);
+  margin-bottom: 3.2rem;
+  font-weight: 500;
 }
-#discount {
+.top-card #percentage {
+  text-transform: uppercase;
   color: #fff;
-  width: 10rem;
-  height: 3rem;
   background: var(--black-color);
-  font-size: 1.4rem;
+
+  width: clamp(10rem, 4rem + 15vw, 14rem);
+
+  height: clamp(3.3rem, 2rem + 5vw, 4.5rem); /*colocar clamp*/
+
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-  text-transform: uppercase;
+  font-weight: 600;
 }
-#time-limit {
-  color: var(--blackTwo-color);
-  font-size: 1.4rem;
+.card #firstPrice {
+  font-size: clamp(1.8rem, 1rem + 2vw, 2.2rem);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
 }
-
-.text-card {
-  display: flex;
-  flex-direction: column;
-  margin: 3.2rem 0;
-}
-.text-card p {
-  font-size: 1.8rem;
-  color: var(--blackTwo-color);
-}
-.text-card p span {
+.card #firstPrice span {
   text-decoration: line-through;
 }
-
-#price {
-  color: var(--black-color);
-  font-size: 4.8rem;
-  margin-top: 5px;
+.card #secondPrice {
+  font-size: clamp(4.8rem, 2.6rem + 4.5vw, 5.5rem);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 3.2rem;
 }
-#ebookTwo {
+.card #secondButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 4.8rem;
+  max-width: 48rem;
+  height: clamp(4.8rem, 2rem + 8vw, 5.8rem);
   background: var(--purple-color);
-  border: none;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
   font-size: 1.6rem;
   text-transform: uppercase;
-  border-radius: 4px;
+  margin: 0 auto 1.8rem;
+  font-weight: 600;
 }
-#ebookTwo a {
-  text-decoration: none;
-  color: #fff;
+.card .bottom-card {
+  text-align: center;
 }
-.bottom-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.bottom-card span {
-  color: var(--blackTwo-color);
-  font-size: 1.2rem;
-  margin-top: 1.6rem;
+.card #bottomSpanCard {
+  font-size: clamp(1.2rem, 0.3rem + 2vw, 1.4rem);
+  font-weight: 500;
 }
 
 footer {
-  text-align: center;
-  padding: 2rem 5rem;
-}
-footer span {
+  width: 100%;
+  height: 8rem; /*colocar clamp*/
+  background: var(--blackTwo-color);
+  color: #fff;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.4rem;
 }
-footer span a {
-  text-decoration: none;
-  color: var(--purple-color)
+footer #instagram {
+  color: var(--purple-color);
+  font-weight: 600;
 }
