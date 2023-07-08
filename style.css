@@ -7,16 +7,21 @@
   font-size: 62.5%;
 
   --purple-color: #884FFE;
+  --purple-color-hover: #7d43f1;
   --black-color: #030007;
   --blackTwo-color: #08040D;
   --gray-color: #BFBFBF;
   --border-students: #130B1D;
 }
 
+html {
+  overflow-y: hidden;
+}
+
 body {
   background: var(--black-color);
   color: #fff;
-
+  height: 100vh;
   position: relative;
 }
 
@@ -52,11 +57,17 @@ main {
   align-items: center;
   margin: 3.2rem 2rem 0 2rem;
 }
+.desktop-top-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 #eFrontLogo {
   width: clamp(6.8rem, 2rem + 15vw, 10rem);
   margin-bottom: 3.2rem;
 }
-main #firstButton {
+#firstButton {
   width: 100%;
   max-width: 37rem;
   height: clamp(3.5rem, 3.5rem + 2vw, 5.5rem);
@@ -71,6 +82,10 @@ main #firstButton {
   place-content: center;
   font-size: 1.4rem;
   margin-bottom: 3.2rem;
+}
+.middle-page {
+  display: flex;
+  flex-direction: column;
 }
 #students {
   width: 100%; /*colocar clamp*/
@@ -96,7 +111,7 @@ main #firstButton {
 #firstParagraph {
   text-align: center;
   font-size: clamp(2.3rem, 1.3rem + 3vw, 3rem); /* 2.4 min*/
-  line-height: clamp(2.8rem, 1rem + 3vw, 5.4rem); /*3.2 min*/
+  line-height: clamp(2.8rem, 1rem + 3vw, 3.5rem);
   margin-bottom: 1.6rem;
   font-weight: 600;
 }
@@ -192,9 +207,80 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: 1.4rem;
 }
 footer #instagram {
   color: var(--purple-color);
   font-weight: 600;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+footer #instagram:hover {
+  color: var(--purple-color-hover);
+}
+
+/* media */
+
+ 
+@media (min-width: 1024px) {
+
+  body {
+    display: grid;
+  }
+  main {
+    width: 100%;
+    max-width: 94rem; /*colocar clamp*/
+    justify-self: center;
+    margin: 3.2rem auto 7rem;
+  }
+  
+  .desktop-top-main {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #firstButton {
+    width: 30rem; /*colocar clamp*/
+    transition: background 0.2s;
+  }
+  #firstButton:hover {
+    background: var(--purple-color-hover);
+  }
+  .middle-main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8rem;
+  }
+  .middle-left-main {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  #students {
+    max-width: 30rem;
+  }
+  #firstParagraph {
+    text-align: start;
+    margin: 1rem 0 2rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  
+  .card {
+    max-width: 38rem;
+  }
+  #secondButton {
+    transition: background 0.1s;
+  }
+  #secondButton:hover {
+    background: var(--purple-color-hover);
+  }
+  footer {
+    height: 6rem;
+    position: absolute;
+    bottom: 0;
+  }
+
 }
