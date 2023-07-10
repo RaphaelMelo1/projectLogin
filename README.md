@@ -1,4 +1,4 @@
-<h1 align="center"> Habits </h1>
+<h1 align="center"> eFront </h1>
 
 <p align="center">
 Projeto feito como desafio 36 da Codelândia<br/>
