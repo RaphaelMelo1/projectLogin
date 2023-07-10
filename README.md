@@ -29,7 +29,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O eFront é uma ferramenta ebook do @iuricode para ensinar frontend para pessoas.
 
-- [Visite meu projeto online](https://raphetes.github.io/projectLogin)
+- [Visite meu projeto online](https://raphetes.github.io/Projeto-eFront)
 
 ## 🔖 Layout
 
